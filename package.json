@@ -1,0 +1,22 @@
+{
+  "name": "psg",
+  "version": "0.0.1",
+  "description": "Command line interface of postcss-style-guide",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test"
+  },
+  "bin": {
+    "psg": "bin/psg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/morishitter/psg/git"
+  },
+  "keywords": ["css","styleguide","documents","patterns"],
+  "author": "Masaaki Morishita",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+  }
+}
