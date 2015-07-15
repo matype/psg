@@ -12,7 +12,10 @@ var argv = minimist(process.argv.slice(2), {
   ],
   alias: {
     h: 'help',
-    V: 'versions'
+    V: 'versions',
+    t: 'theme',
+    n: 'name',
+    f: 'file'
   }
 })
 
@@ -27,8 +30,11 @@ if (argv.h) {
   console.log('')
   console.log('Options:')
   console.log('')
-  console.log('  -V, --versions    output the version number')
-  console.log('  -h, --help        output usage information')
+  console.log('  -V, --versions    Output the version number')
+  console.log('  -h, --help        Output usage information')
+  console.log('  -t, --theme       Theme name')
+  console.log('  -n, --name        Project name')
+  console.log('  -f, --file        Style guide file name')
 }
 
 
