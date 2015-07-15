@@ -7,16 +7,24 @@
     "test": "tape test"
   },
   "bin": {
-    "psg": "bin/psg"
+    "psg": "cli.js"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/morishitter/psg/git"
   },
-  "keywords": ["css","styleguide","documents","patterns"],
+  "keywords": [
+    "css",
+    "styleguide",
+    "documents",
+    "patterns"
+  ],
   "author": "Masaaki Morishita",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {
-  }
+  "dependencies": {
+    "minimist": "^1.1.1",
+    "postcss": "^4.1.16",
+    "postcss-style-guide": "^0.4.2"
+  },
+  "devDependencies": {}
 }
