@@ -26,7 +26,7 @@ if (argv.V) {
 
 
 if (argv.h) {
-  console.log('Usage: atcss input-name output-name [options]')
+  console.log('Usage: psg css-file [options]')
   console.log('')
   console.log('Options:')
   console.log('')
