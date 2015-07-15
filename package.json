@@ -1,11 +1,8 @@
 {
   "name": "psg",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Command line interface of postcss-style-guide",
   "main": "index.js",
-  "scripts": {
-    "test": "tape test"
-  },
   "bin": {
     "psg": "cli.js"
   },
