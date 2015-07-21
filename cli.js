@@ -2,7 +2,8 @@
 
 var fs = require('fs')
 var pkg = require('./package.json')
-var psg = require('./')
+var postcss = require('postcss')
+var psg = require('postcss-style-guide')
 
 var minimist = require('minimist')
 var argv = minimist(process.argv.slice(2), {
@@ -53,5 +54,5 @@ if (argv.file) {
 
 if (argv._[0]) {
   var css = fs.readFileSync(argv._[0], 'utf-8')
-  psg(css, opts)
+  postcss().use(psg(css, opts)).process(css).css
 }
