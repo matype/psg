@@ -19,9 +19,9 @@
   "author": "Masaaki Morishita",
   "license": "MIT",
   "dependencies": {
-    "minimist": "^1.1.1",
-    "postcss": "^4.1.16",
-    "postcss-style-guide": "^0.4.2"
+    "minimist": "^1.2.0",
+    "postcss": "^5.0.10",
+    "postcss-style-guide": "^0.9.0"
   },
   "devDependencies": {}
 }
