@@ -1,16 +1,15 @@
-var fs = require('fs')
 var postcss = require('postcss')
 var styleguide = require('postcss-style-guide')
 
 
-module.exports = function (input, options) {
+function psg (input, options) {
   options = options || {}
   options.processedCSS = input
 
-  var result = postcss()
+  postcss()
     .use(styleguide(options))
     .process(input)
     .css
-
-  return result
 }
+
+module.exports = psg
