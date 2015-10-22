@@ -1,4 +1,6 @@
-# psg
+# psg [![Build Status](https://travis-ci.org/morishitter/psg.svg)](https://travis-ci.org/morishitter/psg)
+
+> Pure CSS Styleguide Generator
 
 Command line interface of [postcss-style-guide](https://github.com/morishitter/postcss-style-guide)
 
@@ -23,7 +25,9 @@ Options:
   -h, --help        Output usage information
   -t, --theme       Theme name
   -n, --name        Project name
-  -f, --file        Style guide file name
+  -f, --file        Style guide file name (default: styleguide.html)
+  -d, --dir         Output directory (default: docs)
+  -c, --showCode    The flag to show CSS code in styleguide
 ```
 
 ## License

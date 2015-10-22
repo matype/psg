@@ -2,21 +2,23 @@
 
 var fs = require('fs')
 var pkg = require('./package.json')
-var postcss = require('postcss')
-var psg = require('postcss-style-guide')
+var psg = require('./')
 
 var minimist = require('minimist')
 var argv = minimist(process.argv.slice(2), {
   boolean: [
     'help',
-    'versions'
+    'versions',
+    'showCode'
   ],
   alias: {
     h: 'help',
     V: 'versions',
     t: 'theme',
     n: 'name',
-    f: 'file'
+    f: 'file',
+    d: 'dir',
+    c: 'showCode'
   }
 })
 
@@ -35,7 +37,9 @@ if (argv.h) {
   console.log('  -h, --help        Output usage information')
   console.log('  -t, --theme       Theme name')
   console.log('  -n, --name        Project name')
-  console.log('  -f, --file        Style guide file name')
+  console.log('  -f, --file        Style guide file name (default: styleguide.html)')
+  console.log('  -d, --dir         Output directory (default: docs)')
+  console.log('  -c, --showCode    The flag to show CSS code in styleguide')
 }
 
 
@@ -50,9 +54,12 @@ if (argv.name) {
 if (argv.file) {
   opts.file = argv.file
 }
+if (argv.dir) {
+  opts.dir = argv.dir
+}
 
 
 if (argv._[0]) {
-  var css = fs.readFileSync(argv._[0], 'utf-8')
-  postcss().use(psg(css, opts)).process(css).css
+  var input = fs.readFileSync(argv._[0], 'utf-8')
+  psg(input, opts)
 }
